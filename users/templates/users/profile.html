@@ -1,0 +1,19 @@
+{% extends 'main/layout.html' %}
+{% block main %}
+  <div class="form-section container">
+    <h2>Кабинет пользователя</h2>
+    <div>
+      <p>
+        <strong>@{{ user.username }}</strong>
+        <b>Email:</b> {{ user.email }}
+      </p>
+    </div>
+    <h4>Изменить данные про пользователя</h4>
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ update_user }}
+      {{ img_profile }}
+      <button type="submit" class="btn btn-outline-warning">Обновить данные</button>
+    </form>
+  </div>
+{% endblock main %}

@@ -1,0 +1,48 @@
+{% extends 'main/layout.html' %}
+
+{% block main %}
+{% if user.is_authenticated %}
+
+<div class="wrapper">
+    <div class="container">
+    <h1>Создание ссылок</h1>
+    <form method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="bn632-hover bn26">Укоротить</button>
+    </form>
+    </div>
+    <div class="container">
+    <h1>Ваши ссылки</h1>
+        {% if user.is_authenticated %}
+        {% if not links %}
+        <p class="text">Пока нет ссылок</p>
+        {% endif %}
+        <ul>
+        {% for el in links %}
+        <li><a href="{% url 'user_link' el.link %}">link/{{el.link}}</a>
+            <form method="post" action="{% url 'del' el.link %}">
+                {% csrf_token %}
+                <button type="submit" class="list" title="Удалить">X</button>
+            </form>
+        </li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+</div>
+{% else %}
+<div class="wrapper logo">
+<img src="/pictures/pngegg.png">
+<h1 class="title">Ucoro.Team</h1>
+</div>
+<p class="text">Бесплатный сайт, который предлагает как сокращение URL-адресов, так и настройку.
+    Что хорошего в этом инструменте, помимо того, что он бесплатный? При нажатии на кнопку будет создан крошечный URL-адрес
+    требующейся страницы с заданной ссылкой.</p>
+<div class="button">
+    <a href="{% url 'user' %}" class="bn632-hover bn26">Войти</a>
+    <a href="{% url 'reg' %}" class="bn632-hover bn26">Регистрация</a>
+</div>
+
+{% endif %}
+{% endblock main %}

@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(177, 227, 235);
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+a {
+  color: #6f6f6f;
+  text-decoration: none;
+  transition: color 500ms ease;
+}
+
+a:hover {
+  color: #1f1f1f;
+}
+.container {
+  min-width: 366px;
+}
+header.container, footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 0;
+  background: #8cbbb7;
+  border: 1px solid silver;
+}
+
+header .logo {
+  color: #222;
+  font-weight: 600;
+  font-size: 25px;
+  margin-left: 10%;
+}
+header nav {
+  display: flex;
+}
+header nav a {
+  margin-left: 15px;
+}
+.container h1 {
+  text-align: center;
+}
+ul {
+  width: 90%;
+  line-height: 170%;
+  margin-left: 7%;
+  margin-top: 20px;
+  font-weight: 600;
+  list-style: none;
+}
+
+.form-section {
+    box-sizing: border-box;
+    background: #fff;
+    padding: 40px 14vw;
+    box-shadow: 0px 2px 4px 0px rgb(5 5 5 / 5%);
+    margin: 95px 0;
+}
+
+form label {
+  margin-top: 15px;
+  display: inline-block;
+  font-weight: 600;
+}
+
+form .helptext {
+  font-size: 13px;
+  display: block;
+  color: #5e5e5e;
+}
+
+.wrapper {
+    display: flex;
+    padding: 10vh 40vh 0;
+    flex: 1 0 auto;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+}
+form input,
+textarea {
+  font-family: "Montserrat", sans-serif;
+  display: block;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 5px;
+  border: 1px solid silver;
+  margin: 10px 0;
+  font-size: 14px;
+  min-width: 340px;
+}
+
+.form-section button {
+  margin: 20px 0;
+  padding: 7px 12px;
+  border-radius: 5px;
+  border: 0;
+  background: black;
+  color: #fff;
+  transition: transform 500ms ease;
+  cursor: pointer;
+}
+.form-section button:hover {
+  transform: scale(1.2);
+}
+
+footer {
+  margin-top: 133px;
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.bn632-hover {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 15px 6em;
+  padding: 1em;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.bn632-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.bn632-hover:focus {
+  outline: none;
+}
+
+.bn632-hover.bn26 {
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #4481eb,
+    #04befe,
+    #3f86ed
+  );
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+h1.title {
+  text-align: center;
+  margin: 5vh;
+  font-size: 6rem;
+}
+img {
+    height: 12rem;
+}
+.logo{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 5vw;
+}
+.button  {
+    display: flex;
+    box-sizing: unset;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+p.text {
+    text-align: center;
+    margin: 2em 8em;
+}
+ul li {
+  display: flex;
+  justify-content: space-between;
+}
+button.list {
+  background-color: red;
+    border-radius: 50%;
+    width: 1.5rem;
+    color: white;
+    border: none;
+    padding: 4px;
+}
+.container a {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+header a img {
+  height: 3rem;
+}
+h2 {
+  margin-bottom: 15px;
+}
+@media only screen and (max-width: 820px) {
+  .wrapper {
+    flex-direction: column;
+    padding: 10vh 2vw;
+  }
+  h1.title {
+    margin: 2vh;
+    font-size: 3rem;
+  }
+  .logo {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 5vw;
+    align-items: center;
+}
+
+}
